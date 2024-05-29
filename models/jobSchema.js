@@ -38,7 +38,7 @@ const jobSchema = new mongoose.Schema({
         minLength : [4, "Fixed Salary must contain at least 4 characeters"],
         maxLength : [9, "Fixed Salary cannot exceed 9 characeters"],
     },
-    SalaryTo:{
+    salaryTo:{
         type : Number,
         minLength : [4, "Fixed Salary must contain at least 4 characeters"],
         maxLength : [9, "Fixed Salary cannot exceed 9 characeters"],
@@ -57,4 +57,7 @@ const jobSchema = new mongoose.Schema({
         required : true,
     },
 });
+
+
+export const Job = mongoose.model("Job" , jobSchema);
 
