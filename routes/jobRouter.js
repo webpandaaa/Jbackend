@@ -1,5 +1,5 @@
 import express from "express";
-import {getAllJobs, getmyJobs, postJob, updateJob} from "../controllers/jobController.js"
+import {deleteJob, getAllJobs, getmyJobs, postJob, updateJob} from "../controllers/jobController.js"
 import { isAuthorized } from "../middleware/auth.js";
 
 const router = express.Router();
@@ -16,5 +16,8 @@ router.get("/getmyJobs" , isAuthorized , getmyJobs);
 
 //Update job
 router.put("/updatejob/:id" , isAuthorized , updateJob)
+
+//Delete job
+router.delete("/deletejob/:id" , isAuthorized , deleteJob)
 
 export default router;
