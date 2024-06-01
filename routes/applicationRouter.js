@@ -16,6 +16,8 @@ router.get("/jobseeker/getall" , isAuthorized , jsGetAllapp) ;
 // Job Seeker delete application route
 router.delete("/delete/:id" , isAuthorized , jsdeleteapp );
 
+
+// route for for applicationo
 router.post("/postapplication" , isAuthorized , postApplication)
 
 
